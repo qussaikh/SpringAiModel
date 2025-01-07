@@ -1,8 +1,6 @@
 package com.ai.QussaiAiModel.controller;
 
-import com.ai.QussaiAiModel.services.ChatService;
-import com.ai.QussaiAiModel.services.ImageService;
-import com.ai.QussaiAiModel.services.RecipeService;
+import com.ai.QussaiAiModel.services.*;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.ai.image.ImageResponse;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,11 +16,15 @@ public class GenAIController {
     private final ChatService chatService;
     private final ImageService imageService;
     private final RecipeService recipeService;
+    private final TravelPlan travelPlan;
+    private final JobSeeker jobSeeker;
 
-    public GenAIController(ChatService chatService, ImageService imageService, RecipeService recipeService) {
+    public GenAIController(ChatService chatService, ImageService imageService, RecipeService recipeService, TravelPlan travelPlan, JobSeeker jobSeeker) {
         this.chatService = chatService;
         this.imageService = imageService;
         this.recipeService = recipeService;
+        this.travelPlan = travelPlan;
+        this.jobSeeker = jobSeeker;
     }
 
     @GetMapping("ask-ai")
@@ -34,13 +36,6 @@ public class GenAIController {
     public String getResponseOptions(@RequestParam String prompt){
         return chatService.getResponseOptions(prompt);
     }
-
-    /*@GetMapping("generate-image")
-    public void generateImages(HttpServletResponse response, @RequestParam String prompt) throws IOException {
-        ImageResponse imageResponse = imageService.generateImage(prompt);
-        String imageUrl = imageResponse.getResult().getOutput().getUrl();
-        response.sendRedirect(imageUrl);
-    }*/
 
     @GetMapping("generate-image")
     public List<String> generateImages(HttpServletResponse response,
@@ -65,5 +60,20 @@ public class GenAIController {
                                       @RequestParam(defaultValue = "any") String cuisine,
                                       @RequestParam(defaultValue = "") String dietaryRestriction) {
         return recipeService.createRecipe(ingredients, cuisine, dietaryRestriction);
+    }
+
+    @GetMapping("travel-creator")
+    public String travelCreator(@RequestParam String destination,
+                                @RequestParam(defaultValue = "any") String interests,
+                                @RequestParam(defaultValue = "") String days,
+                                @RequestParam(defaultValue = "") String budget) {
+        return travelPlan.createTravel(destination, interests, days, budget);
+    }
+    @GetMapping("searching-job")
+    public String searchingJob(@RequestParam String jobTitle,
+                                @RequestParam(defaultValue = "any") String field,
+                                @RequestParam(defaultValue = "") String location,
+                                @RequestParam(defaultValue = "") String employmentType) {
+        return jobSeeker.searchJob(jobTitle, field, location, employmentType);
     }
 }
