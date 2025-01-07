@@ -164,6 +164,9 @@ Instructions:
    ```
 4. Access the API at `http://localhost:8080` (default port).
 
+## reference 
+https://platform.openai.com/docs/overview 
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
