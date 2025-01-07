@@ -54,7 +54,7 @@ GET http://localhost:8080/ask-ai?prompt=Hello
 ```
 "Hi there! How can I assist you today?"
 ```
-
+![Screenshot 2025-01-07 at 14.39.50.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.39.50.png)
 ---
 
 ### 2. **Ask AI with Options**
@@ -105,7 +105,7 @@ GET http://localhost:8080/generate-image?prompt=Sunset&quality=hd&n=2&width=800&
   "https://example.com/image2.png"
 ]
 ```
-
+![Screenshot 2025-01-07 at 14.45.04.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.45.04.png)
 ---
 
 ### 4. **Recipe Creator**
@@ -147,7 +147,7 @@ Instructions:
 5. Return the chicken to the skillet with the tomatoes and onions. Cover the skillet and let it simmer for an additional 5 minutes to allow the flavors to blend.
 6. Serve the Gluten-Free Italian Chicken with Tomato and Onion hot, garnished with fresh basil if desired. Enjoy!"
 ```
-
+![Screenshot 2025-01-07 at 14.47.36.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.47.36.png)
 ---
 
 
