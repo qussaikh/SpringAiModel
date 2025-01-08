@@ -150,6 +150,105 @@ Instructions:
 ![Screenshot 2025-01-07 at 14.47.36.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.47.36.png)
 ---
 
+### 4. **Job seeking**
+
+Generate AI-search or suggest matching job listings.
+
+- **URL**: `/searching-job`
+- **Method**: `GET`
+- **Query Parameters**:
+    - `jobTitle` (String, required).
+    - `field` (String, optional): The preferred cuisine type.
+    - `location` (String, optional, default: empty).
+    - `employmentType` (String, optional, default: empty).
+- **Response**: A list of job suggest .
+
+#### Example Request:
+```http
+GET http://localhost:8080/searching-job?jobTitle=Software engineering&industry=backend&location=sweden, Skåne&employmentType=full time
+```
+
+#### Example Response:
+- json
+```
+[
+ "1. Job Title: Software Engineer
+  Company: Sony Mobile Communications
+  Location: Lund, Sweden
+  Description: Sony Mobile Communications is looking for a software engineer to join their team in Lund, Sweden. The role involves developing and maintaining software applications for mobile devices.
+  Application Link: [Sony Mobile Communications Careers](https://www.sonymobile.com/careers/)"
+]
+```
+![Screenshot 2025-01-08 at 13.57.20.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-08%20at%2013.57.20.png)
+
+
+### 5. **Travel plan**
+
+Generate AI-search or suggest Travel Itinerary Planner.
+
+- **URL**: `/travel-creator`
+- **Method**: `GET`
+- **Query Parameters**:
+    - `destination` (String, required).
+    - `cuisine` (String, optional): The preferred cuisine type.
+    - `dietaryRestriction` (String, optional, default: empty).
+- **Response**: A string containing the plan .
+
+#### Example Request:
+```http
+GET http://localhost:8080/travel-creator?destination=Italy&interests=natur&days=6&budget=500 dollar
+```
+
+#### Example Response:
+```json
+[
+  Day 1: Arrival in Rome
+  - Check into a budget-friendly hotel near the city center
+  - Explore the historic center of Rome, including the Colosseum, Roman Forum, and Pantheon
+  - Enjoy a traditional Italian dinner at a local trattoria
+
+  Day 2: Rome
+  - Visit the Vatican City and St. Peter's Basilica
+  - Wander through the picturesque streets of Trastevere
+  - Relax in Villa Borghese Park
+  - Dinner at a cozy pizzeria
+
+  Day 3: Tuscany
+  - Take a day trip to the beautiful Tuscan countryside
+  - Visit the charming town of Siena and its historic center
+  - Enjoy a wine tasting at a local vineyard
+  - Dinner at a traditional Tuscan restaurant
+
+  Day 4: Florence
+  - Check into a budget-friendly hotel in Florence
+  - Explore the historic center of Florence, including the Duomo, Uffizi Gallery, and Ponte Vecchio
+  - Visit the Boboli Gardens
+  - Dinner at a local trattoria
+
+  Day 5: Venice
+  - Take a train to Venice
+  - Explore the canals and bridges of Venice
+  - Visit St. Mark's Basilica and the Doge's Palace
+  - Enjoy a gondola ride through the city
+  - Dinner at a waterside restaurant
+
+  Day 6: Departure
+  - Enjoy a leisurely breakfast in Venice
+  - Take a vaporetto back to the train station
+  - Depart for the airport for your return flight
+
+  Total estimated cost:
+  - Accommodations: $300
+  - Transportation: $100
+  - Activities: $50
+  - Food: $50
+
+  Total: $500
+
+  This itinerary includes some of Italy's most iconic cities and attractions, while also allowing for some relaxation in the beautiful Tuscan countryside. Enjoy your trip to Italy!
+]
+```
+![Screenshot 2025-01-08 at 13.57.05.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-08%20at%2013.57.05.png)
 
 ## How to Run
 
