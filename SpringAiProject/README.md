@@ -54,7 +54,7 @@ GET http://localhost:8080/ask-ai?prompt=Hello
 ```
 "Hi there! How can I assist you today?"
 ```
-![Screenshot 2025-01-07 at 14.39.50.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.39.50.png)
+![askAi.png](Images%2FaskAi.png)
 ---
 
 ### 2. **Ask AI with Options**
@@ -105,7 +105,7 @@ GET http://localhost:8080/generate-image?prompt=Sunset&quality=hd&n=2&width=800&
   "https://example.com/image2.png"
 ]
 ```
-![Screenshot 2025-01-07 at 14.45.04.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.45.04.png)
+
 ---
 
 ### 4. **Recipe Creator**
@@ -147,7 +147,7 @@ Instructions:
 5. Return the chicken to the skillet with the tomatoes and onions. Cover the skillet and let it simmer for an additional 5 minutes to allow the flavors to blend.
 6. Serve the Gluten-Free Italian Chicken with Tomato and Onion hot, garnished with fresh basil if desired. Enjoy!"
 ```
-![Screenshot 2025-01-07 at 14.47.36.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-07%20at%2014.47.36.png)
+![recipeGen.png](Images%2FrecipeGen.png)
 ---
 
 ### 4. **Job seeking**
@@ -179,7 +179,7 @@ GET http://localhost:8080/searching-job?jobTitle=Software engineering&industry=b
   Application Link: [Sony Mobile Communications Careers](https://www.sonymobile.com/careers/)"
 ]
 ```
-![Screenshot 2025-01-08 at 13.57.20.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-08%20at%2013.57.20.png)
+![jobSeeking.png](Images%2FjobSeeking.png)
 
 
 ### 5. **Travel plan**
@@ -200,8 +200,9 @@ GET http://localhost:8080/travel-creator?destination=Italy&interests=natur&days=
 ```
 
 #### Example Response:
-```json
-[
+- json
+```
+'[
   Day 1: Arrival in Rome
   - Check into a budget-friendly hotel near the city center
   - Explore the historic center of Rome, including the Colosseum, Roman Forum, and Pantheon
@@ -246,9 +247,9 @@ GET http://localhost:8080/travel-creator?destination=Italy&interests=natur&days=
   Total: $500
 
   This itinerary includes some of Italy's most iconic cities and attractions, while also allowing for some relaxation in the beautiful Tuscan countryside. Enjoy your trip to Italy!
-]
+]'
 ```
-![Screenshot 2025-01-08 at 13.57.05.png](..%2F..%2F..%2F..%2FScreenshot%202025-01-08%20at%2013.57.05.png)
+![travelGen.png](Images%2FtravelGen.png)
 
 ## How to Run
 
