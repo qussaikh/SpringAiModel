@@ -5,6 +5,8 @@ The Qussai AI Model is a Spring Boot REST API controller that provides endpoints
 - Get text responses from a chatbot.
 - Generate AI-based images.
 - Create recipes based on provided ingredients and preferences.
+- Generate AI-search or suggest Travel Itinerary Planner.
+- Generate AI-search or suggest matching job listings.
 
 ### Prerequisites
 Before running the application, ensure you have the following:
